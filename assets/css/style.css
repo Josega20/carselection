@@ -1,0 +1,280 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-rows: 2fr 3fr 8fr 2fr 2fr;
+    font-family: roboto;
+
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    background-color: rgb(60, 60, 224);
+    align-items: center;
+    
+}
+
+.hl {
+    display: flex;
+    padding-left: 2em;
+    font-size: 1em;
+}
+
+.hr {
+    display: flex;
+    padding-right: 2em;
+}
+
+.box4 {
+    display: none;
+}
+
+
+menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: gray;
+    padding: 1em 0 1em 0;
+}
+
+label {
+
+    font-size: 1rem;
+    padding-bottom: 1em;
+
+}
+
+select {
+    font-size: 0.9rem;
+    padding: 2px 5px;
+    border-radius: 3px;
+    width: 80%;
+
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 10em;
+    margin: 15px 5px 0px 5px;
+    padding: 5px;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 1px 1px 2px 3px rgb(236, 236, 236);
+}
+
+.card-img {
+    display: flex;
+    flex-grow: 1;
+}
+
+.card-img img {
+    width: 100%;
+    object-fit: contain;
+}
+
+.card button {
+    background-color: darkblue;
+    color: white;
+    width: 40%;
+    padding: 0.5em;
+    border-radius: 3px;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1em;
+    padding-top: 1em;
+    color: rgb(126, 202, 228);
+}
+
+.box {
+    display: flex;
+    border: rgb(126, 202, 228) 2px solid;
+    width: 2rem;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.box1 {
+    display: flex;
+    border: rgb(126, 202, 228) 2px solid;
+    width: 2rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px 0 0 3px;
+
+}
+
+.box2 {
+    display: flex;
+    border: rgb(126, 202, 228) 2px solid;
+    width: 2rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 3px 3px 0;
+
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: rgb(39, 39, 156);
+    align-items: center;
+}
+
+.box3 {
+    display: none;
+}
+
+@media (min-width:576px) {
+
+    .grid-container {
+
+        display: grid;
+        grid-template-areas:
+            'header menu menu'
+            'header main main'
+            'footer main main'
+            'footer pag pag';
+        grid-template-rows: 1fr 24fr 2fr 1fr;
+        grid-template-columns: 2.5fr 4fr 4fr;
+        height: 100vh;
+    }
+
+
+
+
+    header {
+        display: flex;
+        flex-direction: column;
+        grid-area: header;
+        justify-content: flex-start;
+        color: white;
+        background-color: rgb(60, 60, 224);
+        align-items: center;
+        
+    }
+
+    menu {
+        display: flex;
+        grid-area: menu;
+        padding: 0em 0 0em 0;
+
+    }
+    label {
+padding-top: 3px;
+       padding-bottom: 0em;
+    
+    }
+    
+select {
+    font-size: 0.9rem;
+  margin: 3px;
+    border-radius: 3px;
+    width: 80%;
+
+}
+
+    .hr {
+        display: none;
+
+    }
+
+    main {
+        display: flex;
+        grid-area: main;
+        flex-direction: row;
+        flex-wrap: wrap;
+        overflow: auto;
+        justify-content: center;
+        align-items: stretch;
+
+    }
+
+    section {
+        display: flex;
+        grid-area: pag;
+    }
+
+    footer {
+        display: flex;
+        grid-area: footer;
+        font-size: 0.7em;
+        text-align:  center;
+    }
+
+
+    .box4 {
+        display: contents;
+        padding-top: 4em 0 4em 0;
+
+    }
+
+
+    .hl {
+        padding: 1em 0 1em 0;
+
+    }
+
+    select {
+        font-size: 0.9rem;
+        padding: 2px 5px;
+        border-radius: 3px;
+        width: 90%;
+
+    }
+
+    .box3 {
+        display: contents;
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        width: 5.5em;
+        margin: 15px 5px 0px 5px;
+        padding: 5px;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 1px 1px 2px 3px rgb(236, 236, 236);
+    }
+
+    .card-img {
+        display: flex;
+        flex-grow: 1;
+    }
+
+    .card-img img {
+        width: 100%;
+        object-fit: contain;
+    }
+
+    .card button {
+        background-color: darkblue;
+        color: white;
+        width: 50%;
+        padding: 0.5em;
+        border-radius: 3px;
+        font-size: 0.5em;
+    }
+}
